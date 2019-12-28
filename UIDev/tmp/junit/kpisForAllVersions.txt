@@ -1,0 +1,4 @@
+versionName numberOfNodes numberOfEdges numberOfPaths avgDegree clusteringCoefficient diameter
+junit-4.8 414 576 1193 1.39 0.39 9 
+junit-4.9 439 611 1266 1.39 0.39 9 
+junit-4.10 449 627 1288 1.4 0.39 9 

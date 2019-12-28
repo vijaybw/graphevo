@@ -1,0 +1,6 @@
+versionName numberOfNodes numberOfEdges numberOfPaths avgDegree clusteringCoefficient diameter
+log4j-core-2.7 1444 2137 2698 1.48 0.2 6 
+log4j-core-2.8.1 1490 2484 2765 1.67 0.2 6 
+log4j-core-2.8.2 1494 2493 2773 1.67 0.2 6 
+log4j-core-2.8 1481 2470 2762 1.67 0.2 6 
+log4j-core-2.9.0 1509 2813 2805 1.86 0.19 6 

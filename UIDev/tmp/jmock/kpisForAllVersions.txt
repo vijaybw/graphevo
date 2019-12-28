@@ -1,0 +1,8 @@
+versionName numberOfNodes numberOfEdges numberOfPaths avgDegree clusteringCoefficient diameter
+jmock-2.6.0 114 113 121 0.99 0.38 3 
+jmock-2.8.0 115 117 124 1.02 0.37 3 
+jmock-2.8.1 116 127 127 1.09 0.39 3 
+jmock-2.8.2 116 128 127 1.1 0.39 3 
+jmock-2.8.3 116 128 127 1.1 0.39 3 
+jmock-2.8.4 116 128 127 1.1 0.39 3 
+jmock-2.9.0 108 123 121 1.14 0.39 3 

@@ -1,0 +1,320 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="">
+   <![endif]-->
+   <!--[if IE 7]>
+   <html class="no-js lt-ie9 lt-ie8" lang="">
+      <![endif]-->
+      <!--[if IE 8]>
+      <html class="no-js lt-ie9" lang="">
+         <![endif]-->
+         <!--[if gt IE 8]><!-->
+         <html class="no-js" lang="">
+            <!--<![endif]-->
+            <style>
+               #my_file {
+               display: none;
+               }
+               #customfileupload
+               {
+               display: inline-block;
+               background-color: #fff;
+               font-size: 14px;
+               padding: 10px 30px 10px 10px;
+               width: 250px;
+               border: 1px solid #999;
+               box-shadow: inset 1px 1px 5px #ccc;
+               -webkit-box-shadow: inset 1px 1px 5px #ccc;
+               -moz-box-shadow: inset 0px 0px 4px #ccc;
+               -ms-box-shadow: inset 0px 0px 4px #ccc;
+               -o-box-shadow: inset 0px 0px 4px #ccc;
+               z-index: 1;
+               white-space: nowrap;
+               overflow: hidden;
+               text-overflow: ellipsis;
+               }
+            </style>
+            <head>
+               <meta charset="utf-8">
+               <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+               <title>Code2Graph Software Evolution</title>
+
+               <meta name="description" content="">
+               <meta name="viewport" content="width=device-width, initial-scale=1">
+               <link rel="apple-touch-icon" href="apple-touch-icon.png">
+               <link rel="stylesheet" href="css/bootstrap.min.css">
+               <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+               <link rel="stylesheet" href="css/fontAwesome.css">
+               <link rel="stylesheet" href="css/templatemo-style.css">
+               <script src="js/vendor/jquery-1.11.2.min.js"></script>
+               <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+               <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+               <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+               <script type="text/javascript" src="index.js"></script>
+            </head>
+            <body>
+               <div class="overlay"></div>
+               <section class="top-part">
+                  <video controls autoplay loop>
+                     <source src="videos/video.mp4" type="video/mp4">
+                     <source src="videos/video.ogg" type="video/ogg">
+                     Your browser does not support the video tag.
+                  </video>
+               </section>
+               <section class="cd-hero">
+                  <div class="cd-slider-nav">
+                     <nav>
+                        <span class="cd-marker item-1"></span>
+                        <ul>
+                           <li class="selected">
+                              <a href="#0">
+                                 <div class="image-icon"><img src="img/home-icon.png"></div>
+                                 <h6>Welcome</h6>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#0">
+                                 <div class="image-icon"><img src="img/about-icon.png"></div>
+                                 <h6>About Us</h6>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#0">
+                                 <div class="image-icon"><img src="img/projects-icon.png"></div>
+                                 <h6>Projects</h6>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#0">
+                                 <div class="image-icon"><img src="img/anal-icon.png"></div>
+                                 <h6>Software Analysis</h6>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#0">
+                                 <div class="image-icon"><img src="img/evol2-icon.png"></div>
+                                 <h6>Software Evolution</h6>
+                              </a>
+                           </li>
+                        </ul>
+                     </nav>
+                  </div>
+                  <!-- .cd-slider-nav -->
+                  <ul class="cd-hero-slider">
+                     <li class="selected">
+                        <div class="heading">
+                           <h1>Welcome To GraphEvo</h1>
+                           <span>Characterizing and Understanding Software Evolution using Call Graphs</span>
+                        </div>
+                        <div class="cd-full-width first-slide">
+                           <div class="container">
+                              <div class="row">
+                                 <div class="col-md-12">
+                                    <div class="content first-content">
+                                       <h4>Let’s Talk More About Graphevo</h4>
+                                       <p>Understanding  software  evolution  is  an  imperative prerequisite   for   software   related   activities   such   as   testing,debugging,  and  maintenance.  As  a  software  system  evolves,  itincreases  in  size  and  complexity,  introducing  new  challengesof  understating  the  inner  system  interactions  and  subsequently hinders   the   overall   system   comprehension.   While   tools   that construct  and  visualize  call  graphs  have  been  used  to  facilitatesoftware  comprehension,  they  are  still  limited  to  capturing  the functionality  of  a  single  software  system  at  a  time.  However, understanding  the  similarities  and  differences  across  multiple releases  becomes  an  imperative  and  challenging  task  duringsoftware   evolution.   To   this   end,   we   present   a   tool,   namedGraphEvo, that focuses onautomating the process of quantifying and visualizing the changes across multiple releases of a software system  based  on  an  information-theoretic  approach  to  comparethe   call   graphs.   Specifically,   GraphEvo   can   automatically construct   and   visualize   the   call   graph   for   one   or   more software releases, calculate and display a set of graph-based metrics, and construct  color-coded  call  graphs  to  visualize system   evolution.   The   main   goal   of   GraphEvo   is   to   assistsoftware   developers   and   testers   in   exploring   and   trackingsoftware changes over time. We demonstrate the functionality ofGraphEvo  by  analyzing  and  studying  five  real  software  systemsthroughout  their  entire  lifespan.</p>
+                                       <br>
+                                       <p>If you use the application in any publications or reports, please cite the following papers:
+                                          GraphEvo: Characterizing and Understanding Software Evolution using Call Graphs
+                                          November 2019
+                                          Conference: IEEE International Conference on Big Data (IEEE BigData 2019)At: Los Angeles, CA, USA
+                                          <b>https://www.researchgate.net/publication/337402685_GraphEvo_Characterizing_and_Understanding_Software_Evolution_using_Call_Graphs</b>
+                                       </p>
+                                       <div class="primary-button">
+                                          <a href="https://goo.gl/8edZ64">Watch Demo</a>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </li>
+                     <li>
+                        <div class="heading">
+                           <h1>About Us</h1>
+                           <span>Get More Info About Udica Team</span>
+                        </div>
+                        <div class="cd-half-width second-slide">
+                           <div class="container">
+                              <div class="row">
+                                 <div class="col-md-12">
+                                    <div class="content second-content">
+                                       <div class="row">
+                                          <div class="col-md-7">
+                                             <div class="left-about-text">
+                                                <h4>What we do?</h4>
+                                                <p>Vijay Walunj, Gharib Gharibi, Duy H. Ho, Yugyung Lee</p>
+                                                <p>The UMKC Distributed Intelligent Computing group (UDIC) aims at fostering the spirit of research and inquiry in the areas of Distributed Computing, Artificial Intelligence, Machine Learning, Deep Learning, and Data Science. The group provides opportunities for research-oriented discussions and activities for undergraduate and graduate students from the Computer Science department and related studies, including Software Architecture, Bioinformatics, and Computer Networking.</p>
+                                                <div class="primary-button">
+                                                   <a href="https://info.umkc.edu/UDIC_Research/">Discover More</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </li>
+                     <li>
+                        <div class="heading">
+                           <h1>Our projects</h1>
+                           <span>No Content</span>
+                        </div>
+                        <div class="cd-half-width fourth-slide">
+                           <div class="container">
+                              <div class = "row">
+                                 <div class="col-md-6 col-md-offset-3">
+                                    <div class="content fourth-content">
+                                       <div class="row">
+                                          <div class="col-md-12 project-item">
+                                             <div class = "fivth-content project-item" style="text-align: center">
+                                                <button type="submit" id="directory-btn" class="btn">View old projects</button>
+                                                <p>No Content</p>
+                                                <br><br>
+                                                <p id="result"></p>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="cd-half-width fourth-slide">
+                           <div class="container">
+                              <div class="row">
+                                 <div class="col-md-12">
+                                    <div class="content fourth-content">
+                                       <div class="row">
+                                          <p>No Content</p>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </li>
+                     <li>
+                        <div class="heading">
+                           <h1>Software Analysis</h1>
+                           <span>Content of Software Analysis</span>
+                        </div>
+                        <div class="cd-half-width third-slide">
+                           <div class="container">
+                              <div class="row">
+                                 <div class="col-md-12">
+                                    <div class="content third-content">
+                                       <div class="row">
+                                          <p>No Content</p>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </li>
+                     <li>
+                        <div class="heading">
+                           <h1>Software Evolution</h1>
+                           <span>Gather an insight into your software evolution now!</span>
+                        </div>
+                        <div class="cd-half-width fivth-slide">
+                           <div class="container">
+                              <div class="row">
+                                 <div class="col-md-12">
+                                    <div class="content fivth-content">
+                                       <div class="row">
+                                          <div class="col-md-6 col-md-offset-3">
+                                             <div class="left-info" style="text-align: center">
+                                                <form action="fileupload" method="post" enctype="multipart/form-data" id = "fileuploadForm">
+                                                   <!-- Use <button> tag instead of <input type = "button"> tag because these two are different
+                                                      <button> without the type will implicitly submit-->
+                                                   <button type = "button" class="" id="get_file"><i class="glyphicon glyphicon-open"></i>Open Files</button>
+                                                   <br><br><input type="file" multiple name="filetoupload" id="filetoupload" accept = ".jar" style="display: none;">
+                                                   <div id="customfileupload">Select a file</div>
+                                                   <br><br>
+                                                   Enter Your Project Name (eg. use company in case com.company.something): <input name="pname" style = "border-style: groove;" type="text" class="form-control" id="pname" placeholder="Project Name" required="">
+                                                   <br><button type="submit" id = "submit-btn" class = "btn"> Upload and Analyze </button>
+                                                </form>
+                                                <br>
+                                                </p>
+                                             </div>
+                                          </div>
+                                       </div>
+                                       <div class = 'row'>
+                                          <div class = 'col-md-12' id = 'metrics' style = "text-align: center; display:none">
+                                             <div class = 'row' style = "margin-bottom:10px">
+                                                <h1 style = "text-align: center">Version Comparison</h1>
+                                                <div class = 'col-md-3 col-md-offset-2'>
+                                                   <h2>Version 1</h2>
+                                                   <select id = 'drop-1'>
+                                                   </select>
+                                                </div>
+                                                <div class = 'col-md-3'>
+                                                   <h2>Version 2</h2>
+                                                   <select id = 'drop-2'>
+                                                   </select>
+                                                </div>
+                                                <div class = 'col-md-3' style="margin-top:65px">
+                                                   <button id = 'compareBtn' class = 'btn call-graph-btn'>Compare these two versions</button>'
+                                                </div>
+                                             </div>
+                                             <h1 style = "text-align: center;margin-top:30px">Metrics</h1>
+                                             <br><br>
+                                             <table id = 'versionTable' align center>
+                                             </table>
+                                          </div>
+                                       </div>
+                                       <br><br>
+                                       <div class = 'row' id ="chartRow" style="display:none">
+                                          <div class = 'col-md-2 col-md-offset-1'>
+                                             <canvas id="myChart" height = 500></canvas>
+                                          </div>
+                                          <div class = 'col-md-2'>
+                                             <canvas id="myChart2" height = 500></canvas>
+                                          </div>
+                                          <div class = 'col-md-2'>
+                                             <canvas id="myChart3" height = 500></canvas>
+                                          </div>
+                                          <div class = 'col-md-2'>
+                                             <canvas id="myChart4" height = 500></canvas>
+                                          </div>
+                                          <div class = 'col-md-2'>
+                                             <canvas id="myChart5" height = 500></canvas>
+                                          </div>
+                                       </div>
+                                       <div class = 'row' id = 'linebreak' style="display:none">
+                                          <div class = 'col-md-6 col-md-offset-3'>
+                                             <hr>
+                                          </div>
+                                       </div>
+                                       <div class = 'row'>
+                                          <div class = 'col-md-12'>
+                                             <p>Higher the number between the versions, higher is the code-base difference.</p>
+                                             <div class='wrap-iframe'>
+                                                <iframe src = "" id = 'resultPage'></iframe>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </li>
+                  </ul>
+                  <!-- .cd-hero-slider -->
+               </section>
+               <!-- .cd-hero -->
+               <footer>
+                  <p>GraphEvo-CHARACTERIZING AND UNDERSTANDING SOFTWARE EVOLUTION USING CALL GRAPHS</p>
+               </footer>
+               <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+               <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+               <script src="js/vendor/bootstrap.min.js"></script>
+               <script src="js/plugins.js"></script>
+               <script src="js/main.js"></script>
+            </body>
+         </html>

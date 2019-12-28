@@ -1,0 +1,699 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<style>
+    #my_file {
+        display: none;
+    }
+    #customfileupload
+    {
+        display: inline-block;
+        background-color: #fff;
+        font-size: 14px;
+        padding: 10px 30px 10px 10px;
+        width: 250px;
+        border: 1px solid #999;
+        box-shadow: inset 1px 1px 5px #ccc;
+        -webkit-box-shadow: inset 1px 1px 5px #ccc;
+        -moz-box-shadow: inset 0px 0px 4px #ccc;
+        -ms-box-shadow: inset 0px 0px 4px #ccc;
+        -o-box-shadow: inset 0px 0px 4px #ccc;
+        z-index: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+</style>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Welcome To GraphEvo</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/fontAwesome.css">
+    <link rel="stylesheet" href="css/templatemo-style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="//d3js.org/d3.v4.min.js"></script>
+    <script src="https://unpkg.com/viz.js@1.8.1/viz.js" type="javascript/worker"></script>
+    <script src="https://unpkg.com/d3-graphviz@1.4.0/build/d3-graphviz.min.js"></script>
+</head>
+<body>
+
+<div class="overlay"></div>
+<section class="top-part">
+    <video controls autoplay loop>
+        <source src="videos/video.mp4" type="video/mp4">
+        <source src="videos/video.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+    </video>
+</section>
+
+<section class="cd-hero">
+
+    <div class="cd-slider-nav">
+        <nav>
+            <span class="cd-marker item-1"></span>
+            <ul>
+                <li class="selected"><a href="#0"><div class="image-icon"><img src="img/home-icon.png"></div><h6>Welcome</h6></a></li>
+                <li><a href="#0"><div class="image-icon"><img src="img/about-icon.png"></div><h6>About Us</h6></a></li>
+                <li><a href="#0"><div class="image-icon"><img src="img/projects-icon.png"></div><h6>Projects</h6></a></li>
+                <li><a href="#0"><div class="image-icon"><img src="img/anal-icon.png"></div><h6>Software Analysis</h6></a></li>
+                <li><a href="#0"><div class="image-icon"><img src="img/evol2-icon.png"></div><h6>Software Evolution</h6></a></li>
+            </ul>
+        </nav>
+    </div> <!-- .cd-slider-nav -->
+
+    <ul class="cd-hero-slider">
+
+        <li class="selected">
+            <div class="heading">
+                <h1>GraphEvo</h1>
+                <span>Welcome To GraphEvo</span>
+            </div>
+            <div class="cd-full-width first-slide">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="content first-content">
+
+                                <h4>Version 2.0's Call Graph</h4>
+                                <div id="graph" style="text-align: center;"></div>
+                                <a href="#" onClick="MyWindow=window.open('/callgraph-popup.html','MyWindow','width=800,height=600'); return false;">Click Here</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <div class="heading">
+                <h1>About Us</h1>
+                <span>Get More Info About Our Agency</span>
+            </div>
+            <div class="cd-half-width second-slide">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="content second-content">
+                                <div class="row">
+                                    <div class="col-md-7 left-image">
+                                        <img src="img/left-about-image.jpg">
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="right-about-text">
+                                            <h4>Who we are?</h4>
+                                            <p>Fusce neque leo, dapibus sed imperdiet sed, vulputate sed purus. Nam eget justo in nibh facilisis rhoncus. Donec et risus non mauris lobortis convallis. Aliquam id urna quis ante blandit semper.</p>
+                                            <div class="primary-button">
+                                                <a href="#">Discover More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <div class="left-about-text">
+                                            <h4>What we do?</h4>
+                                            <p>Nam aliquam ultrices interdum. Vivamus metus mi, accumsan a tincidunt a, efficitur id felis. Vivamus non nibh malesuada, vestibulum nulla in, iaculis sem. Aenean tincidunt faucibus ipsum, ac aliquet nunc accumsan sed. Nulla sodales nunc sit amet libero egestas, ut interdum ex congue.</p>
+                                            <div class="primary-button">
+                                                <a href="#">Discover More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5 right-image">
+                                        <img src="img/right-about-image.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="heading">
+                <h1>Our projects</h1>
+                <span>Here you can check our recent projects</span>
+            </div>
+            <div class="cd-half-width fourth-slide">
+                <div class="container">
+                    <div class = "row">
+                        <div class="col-md-6 col-md-offset-3">
+                            <div class="content fourth-content">
+                                <div class="row">
+                                    <div class="col-md-12 project-item">
+                                        <div class = "fivth-content project-item" style="text-align: center">
+                                            <button type="submit" id="directory-btn" class="btn">View old projects</button>
+                                            <br><br>
+                                            <p id="result"></p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cd-half-width fourth-slide">
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="content fourth-content">
+                                <div class="row">
+                                    <div class="col-md-3 project-item">
+                                        <a href="img/item-02.jpg" data-lightbox="image-1"><img src="img/project-item-02.jpg"></a>
+                                    </div>
+                                    <div class="col-md-3 project-item">
+                                        <a href="img/item-03.jpg" data-lightbox="image-1"><img src="img/project-item-03.jpg"></a>
+                                    </div>
+                                    <div class="col-md-3 project-item">
+                                        <a href="img/item-04.jpg" data-lightbox="image-1"><img src="img/project-item-04.jpg"></a>
+                                    </div>
+                                    <div class="col-md-3 project-item">
+                                        <a href="img/item-05.jpg" data-lightbox="image-1"><img src="img/project-item-05.jpg"></a>
+                                    </div>
+                                    <div class="col-md-3 project-item">
+                                        <a href="img/item-06.jpg" data-lightbox="image-1"><img src="img/project-item-06.jpg"></a>
+                                    </div>
+                                    <div class="col-md-3 project-item">
+                                        <a href="img/item-07.jpg" data-lightbox="image-1"><img src="img/project-item-07.jpg"></a>
+                                    </div>
+                                    <div class="col-md-3 project-item">
+                                        <a href="img/item-08.jpg" data-lightbox="image-1"><img src="img/project-item-08.jpg"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+        <li>
+            <div class="heading">
+                <h1>Software Analysis</h1>
+                <span>Content of Software Analysis</span>
+            </div>
+            <div class="cd-half-width third-slide">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="content third-content">
+                                <div class="row">
+                                    <div class="col-md-7 left-image">
+                                        <img src="img/left-feature-image.png">
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="right-feature-text">
+                                            <h4>Featured Product: <em>Newline</em></h4>
+                                            <p>Lorem ipsum dolor amet, consecte adipiscing elit, quisque dictum convallis mi. In dapibus auctor dictum donec mattis quis eros ultricies feugiat. Morbi congue faucibus mi, ague blandit curabitur ac lacinia.</p>
+                                            <div class="feature-list">
+                                                <ul>
+                                                    <p>- Suspendisse mattis finibus sem</p>
+                                                    <p>- Pellentesque et urna vel lectus</p>
+                                                    <p>- Vestibulum iaculis nisi dui</p>
+                                                    <p>- Donec sagittis eros , ac tempus ligula</p>
+                                                    <p>- Integer sapien risus, auctor</p>
+                                                </ul>
+                                            </div>
+                                            <div class="primary-button">
+                                                <a href="#">Discover More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+
+
+        <li>
+            <div class="heading">
+                <h1>Software Evolution</h1>
+                <span>Gather an insight into your software evolution now!</span>
+            </div>
+            <div class="cd-half-width fivth-slide">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="content fivth-content">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="left-info">
+                                            <form action="fileupload" method="post" enctype="multipart/form-data" id = "fileuploadForm">
+                                                <!-- Use <button> tag instead of <input type = "button"> tag because these two are different
+                                                 <button> without the type will implicitly submit-->
+                                                <button type = "button" class="" id="get_file"><i class="glyphicon glyphicon-open"></i>Open Files</button>
+                                                <br><br><input type="file" multiple name="filetoupload" id="filetoupload" accept = ".jar" style="display: none;">
+                                                <div id="customfileupload">Select a file</div>
+                                                <br><br>
+                                                Enter Your Project Name: <input name="pname" style = "border-style: groove;" type="text" class="form-control" id="pname" placeholder="Project Name" required="">
+                                                <br><button type="submit" id = "submit-btn" class = "btn"> Upload and Analyze </button>
+
+                                            </form>
+
+                                            <br><br>
+                                            <em>University of Missouri-Kansas City<br>5100 Rockhill Rd, Kansas City, MO 64110</em>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="row">
+                                            <form id="contact" action="" method="post">
+                                                <div class="col-md-6">
+                                                    <fieldset>
+                                                        <input name="name" type="text" class="form-control" id="name" placeholder="Your Name" required="">
+                                                    </fieldset>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <fieldset>
+                                                        <input name="email" type="email" class="form-control" id="email" placeholder="Email" required="">
+                                                    </fieldset>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <fieldset>
+                                                        <textarea name="message" rows="6" class="form-control" id="message" placeholder="Message" required=""></textarea>
+                                                    </fieldset>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <fieldset>
+                                                        <button type="submit" id="form-submit" class="btn">Send Message</button>
+                                                    </fieldset>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class = 'row'>
+                                    <div class = 'col-md-12' style = "text-align: center">
+                                        <table id = 'versionTable' align center>
+                                        </table>
+
+
+                                    </div>
+                                </div>
+                                <div class = 'row' id ="chartRow" style="display:none">
+                                    <div class = 'col-md-2 col-md-offset-1'>
+                                        <canvas id="myChart" height = 400></canvas>
+                                    </div>
+                                    <div class = 'col-md-2'>
+                                        <canvas id="myChart2" height = 400></canvas>
+                                    </div>
+                                    <div class = 'col-md-2'>
+                                        <canvas id="myChart3" height = 400></canvas>
+                                    </div>
+                                    <div class = 'col-md-2'>
+                                        <canvas id="myChart4" height = 400></canvas>
+                                    </div>
+                                    <div class = 'col-md-2'>
+                                        <canvas id="myChart5" height = 400></canvas>
+                                    </div>
+
+                                </div>
+                                <div class = 'row' id = 'linebreak' style="display:none">
+                                    <div class = 'col-md-6 col-md-offset-3'>
+                                        <hr>
+                                    </div>
+                                </div>
+
+                                <div class = 'row'>
+                                    <div class = 'col-md-12'>
+                                        <div class='wrap-iframe'>
+                                            <iframe src = "" id = 'resultPage'></iframe>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class = 'left-info'>
+                                    <ul class="social-icons">
+                                        <i><a href="#"><i class="fa fa-facebook"></i></a></i>
+                                        <i><a href="#"><i class="fa fa-twitter"></i></a></i>
+                                        <i><a href="#"><i class="fa fa-linkedin"></i></a></i>
+                                        <i><a href="#"><i class="fa fa-rss"></i></a></i>
+                                        <i><a href="#"><i class="fa fa-behance"></i></a></i>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul> <!-- .cd-hero-slider -->
+</section> <!-- .cd-hero -->
+
+
+<footer>
+    <p>Copyright &copy; 2017 Your Company
+
+        | Designed by <a href="http://www.templatemo.com" target="_parent"><em>templatemo</em></a></p>
+</footer>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+<script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+<script>
+    document.getElementById('get_file').onclick = function() {
+        document.getElementById('filetoupload').click();
+    };
+    $('input[type=file]').change(function (e) {
+        //alert("The text has been changed.")
+        $('#customfileupload').html($(this).val());
+        var files = $("#filetoupload")[0].files;
+        console.log(files);
+        alert($("#pname").val());
+        for (var i = 0; i < files.length; i++)
+        {
+            alert(files[i].name);
+        }
+        var url = 'fileupload';
+        let data = "";
+        /*$.ajax({
+            url: url,
+            method: 'POST',
+            data: data,
+            dataType: 'text'
+        }).done(function (response) {
+            console.log("in done");
+            console.log(response);
+            var result = response;
+            $("#distanceField").html(result);
+            $("#distanceField").css("white-space","pre-line"); //break down to multiple lines
+        }).fail(function() {
+            alert("Sorry. Server unavailable. ");
+        });*/
+    });
+
+    /////Test Button for Java function
+    $("#btn_getSum").click(function() {
+        //$("#demo").html("Hello, World!");
+
+        let data = {
+            num1: $("#num1").val(),
+            num2: $("#num2").val()
+        };
+        console.log(data);
+        var url = 'addnum';
+        $.ajax({
+            url: url,
+            method: 'POST',
+            data: data,
+            dataType: 'text'
+        }).done(function (response) {
+            console.log(response);
+            /*for (var i = 0; i<response.location.length; i++){
+                console.log("\nThe Distance that it takes to travel is: " + response.location[i].distance);
+                console.log("\nThe Traveling Time is: " + response.location[i].duration);
+                var result = "\nThe Distance is: " + response.location[i].distance
+                    + "\nThe Time is: " + response.location[i].duration*/
+            $("#distanceField").html(response);
+            $("#distanceField").css("white-space","pre-line"); //break down to multiple lines
+            //}
+        }).fail(function() {
+            alert("Sorry. Server unavailable. ");
+        });
+        $("#demo").html("Bye bye, World!");
+    });
+    $("#directory-btn").click(function() {
+        //$("#demo").html("Hello, World!");
+
+        /*let data = {
+            num1: $("#num1").val(),
+            num2: $("#num2").val()
+        };*/
+        var url = 'pArchive';
+        $.ajax({
+            url: url,
+            method: 'POST',
+            dataType: 'json'
+        }).done(function (response) {
+            console.log(response);
+            $('#result').text("");
+            console.log(response.project.length);
+            for (var i = 0; i<response.project.length; i++){
+                //console.log("\nThe Distance that it takes to travel is: " + response.location[i].distance);
+                //console.log("\nThe Traveling Time is: " + response.location[i].duration);
+                $('<a>',{
+                    title: "Click to see results of project " + response.project[i].name,
+                    id:response.project[i].name,
+                    text:response.project[i].name,
+                    href:'/loadProject?id=' + response.project[i].name,
+                    style: "font-size: 20px",
+                    //click:function(){alert('test');return false;}
+                }).appendTo($('#result'));
+                $('<br>').appendTo($('#result'));
+            //$("#distanceField").html(response);
+            //$("#distanceField").css("white-space","pre-line"); //break down to multiple lines
+            }
+        }).fail(function() {
+            alert("Sorry. Server unavailable. ");
+        });
+        //$("#demo").html("Bye bye, World!");
+
+
+
+    });
+    $("#submit-btn").click(function (event) {
+        //alert("clicked");
+        //stop submit the form, we will post it manually.
+
+        event.preventDefault();
+        //$("#fileuploadForm").submit();
+            //get the action-url of the form
+        var actionurl = "fileupload";
+        var data = new FormData();
+        jQuery.each(jQuery('#filetoupload')[0].files, function(i, file) {
+            data.append('filetoupload', file);
+        });
+        data.append('pname', $("#pname").val());
+        console.log(data);
+            //do your own request an handle the results
+            $.ajax({
+                url: actionurl,
+                cache: false,
+                contentType: false,
+                processData: false,
+                method: 'POST',
+                data: data,
+                success: function(response) {
+                    $("#versionTable");
+                        var versionArr = [];
+                        var nodeArr = [];
+                        var edgeArr = [];
+                        var pathArr = [];
+                        var avgDegArr = [];
+                        var clustCoeffArr = [];
+                        var diaArr = [];
+                        $.each(response.text, function(i, item) {
+                                $.each(response.text[i], function(j, item2) {
+                                    //first line of .txt file
+                                    if (i == 0){
+                                        var trHTML =  '<tr><th>' + item2[0]
+                                            + '</th><th>' + item2[1]
+                                            + '</th><th>' + item2[2]
+                                            + '</th><th>' + item2[3]
+                                            + '</th><th>' + item2[4]
+                                            + '</th><th>' + item2[5]
+                                            + '</th><th>' + item2[6]
+                                            + '</th></tr>';
+                                        $("#versionTable").append(trHTML);
+                                    }
+                                    //the rest of the txt file
+                                    else {
+                                        //Item is value of each array: [1.45,3,4,...]
+                                        versionArr.push(item2[0]);
+                                        nodeArr.push(item2[1]);
+                                        edgeArr.push(item2[2]);
+                                        pathArr.push(item2[3]);
+                                        avgDegArr.push(item2[4]);
+                                        clustCoeffArr.push(item2[5]);
+                                        diaArr.push(item2[6]);
+
+                                        var trHTML =  '<tr><td>' + item2[0]
+                                            + '</td><td>' + item2[1]
+                                            + '</td><td>' + item2[2]
+                                            + '</td><td>' + item2[3]
+                                            + '</td><td>' + item2[4]
+                                            + '</td><td>' + item2[5]
+                                            + '</td><td>' + item2[6]
+                                            + '</td><td><button id = \'' + item2[0] + '\' class = \'btn call-graph-btn\'>View Call Graph</button>'
+                                            + '</td></tr>';
+                                        $("#versionTable").append(trHTML);
+                                    }
+                                    //end of inner loop
+                                });
+
+                        //end of outer loop
+                        });
+                    console.log(versionArr);
+                    console.log(nodeArr);
+                    console.log(edgeArr);
+                    console.log(pathArr);
+                    console.log(avgDegArr);
+                    console.log(clustCoeffArr);
+                    console.log(diaArr);
+                    $( "#versionTable .btn" ).click(function() {
+                        //alert($(this).attr('id'));
+                        console.log($(this).attr('id'));
+                        window.location.href = "callgraph.html";
+                    });
+                    ///Show Charts///
+                    $("#chartRow").show();
+                    var ctx = document.getElementById("myChart");
+                    var myChart = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: versionArr,
+                            datasets: [{
+                                data: nodeArr,
+                                label: "Nodes",
+                                borderColor: "#3e95cd",
+                                fill: false
+                            },
+                                {
+                                    data: edgeArr,
+                                    label: "Nodes",
+                                    borderColor: "#B22222",
+                                    fill: false
+                                }
+                            ]
+                        },
+                        options: {
+                            title: {
+                                display: true,
+                                text: 'Versions vs Number of Nodes and Edges'
+                            }
+                        }
+                    });
+                    var ctx = document.getElementById("myChart2");
+                    var myChart2 = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: versionArr,
+                            datasets: [{
+                                data: pathArr,
+                                label: "Paths",
+                                borderColor: "#3e95cd",
+                                fill: false
+                            }
+                            ]
+                        },
+                        options: {
+                            title: {
+                                display: true,
+                                text: 'Versions vs Number of Paths'
+                            }
+                        }
+                    });
+                    var ctx = document.getElementById("myChart3");
+                    var myChart3 = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: versionArr,
+                            datasets: [{
+                                data: avgDegArr,
+                                label: "Avg Degrees",
+                                borderColor: "#3e95cd",
+                                fill: false
+                            }
+                            ]
+                        },
+                        options: {
+                            title: {
+                                display: true,
+                                text: 'Versions vs Average Degrees'
+                            }
+                        }
+                    });
+                    var ctx = document.getElementById("myChart4");
+                    var myChart4 = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: versionArr,
+                            datasets: [{
+                                data: clustCoeffArr,
+                                label: "Cluster Coeff.",
+                                borderColor: "#3e95cd",
+                                fill: false
+                            }
+                            ]
+                        },
+                        options: {
+                            title: {
+                                display: true,
+                                text: 'Versions vs Clustering Coefficients'
+                            }
+                        }
+                    });
+                    var ctx = document.getElementById("myChart5");
+                    var myChart5 = new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: versionArr,
+                            datasets: [{
+                                data: diaArr,
+                                label: "Diameter",
+                                borderColor: "#3e95cd",
+                                fill: false
+                            }
+                            ]
+                        },
+                        options: {
+                            title: {
+                                display: true,
+                                text: 'Versions vs Diameters'
+                            }
+                        }
+                    });
+                    ///Call Load Project
+                    var loadURL = '/loadProject?id=' + $("#pname").val();
+                    $.ajax({
+                        url: loadURL,
+                        method: 'get',
+                        dataType: 'text',
+                        success: function (response){
+                            console.log(response);
+                            $("#resultPage").attr("src", response);
+                            $("#linebreak").show();
+                            $(".wrap-iframe").show();
+                            $("#resultPage").show();
+                        }
+                    })
+                 },
+                error:(function() {
+                     alert("Sorry. Server unavailable. ");
+                 })
+
+            });
+    });
+    $.get('/tmp/Hello/dot.txt', function(data) {
+        d3.select("#graph").graphviz()
+            .fade(false)
+            .renderDot(data);
+    }, 'text');
+
+
+</script>
+</html>

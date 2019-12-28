@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="9545803a-e6d4-4375-b75e-f8da9dc6e016" name="Default" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="C:/.." />
+  </component>
+  <component name="ProjectId" id="1VU4ZDwnkt4BACYFBjpiJklIFOj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\udicacodes\graphevo\UIDev" />
+      <recent name="C:\Users\hoang\Documents\GitHub\CS5590-Directed-Reading\Code2Graph\UIDev\templatemo_503_newline\templatemo_503_newline" />
+      <recent name="C:\Users\hoang\Desktop\templatemo_503_newline\templatemo_503_newline" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\udicacodes\graphevo\UIDev" />
+      <recent name="C:\udicacodes\graphevo\UIDev\html" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Node.js.expressServer.js">
+    <configuration name="callgraph-popup.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/templatemo_503_newline/callgraph-popup.html">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/UIDev/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="testpage.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/templatemo_503_newline/testpage.html">
+      <method v="2" />
+    </configuration>
+    <configuration name="expressServer.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/expressServer.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/index.js" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.testpage.html" />
+      <item itemvalue="JavaScript Debug.callgraph-popup.html" />
+      <item itemvalue="JavaScript Debug.index.html" />
+      <item itemvalue="Node.js.expressServer.js" />
+      <item itemvalue="Node.js.index.js" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.expressServer.js" />
+        <item itemvalue="Node.js.index.js" />
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.callgraph-popup.html" />
+        <item itemvalue="JavaScript Debug.testpage.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9545803a-e6d4-4375-b75e-f8da9dc6e016" name="Default" comment="" />
+      <created>1508801715299</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1508801715299</updated>
+      <workItem from="1508801716550" duration="1110000" />
+      <workItem from="1508803014660" duration="341000" />
+      <workItem from="1515652355034" duration="558000" />
+      <workItem from="1540504862462" duration="621000" />
+      <workItem from="1540505902913" duration="4299000" />
+      <workItem from="1540673361276" duration="869000" />
+      <workItem from="1540674407494" duration="924000" />
+      <workItem from="1540764509544" duration="233000" />
+      <workItem from="1549333176359" duration="166000" />
+      <workItem from="1549333361819" duration="12845000" />
+      <workItem from="1549584334136" duration="21000" />
+      <workItem from="1549913862932" duration="112000" />
+      <workItem from="1549914053179" duration="36010000" />
+      <workItem from="1550082175667" duration="6241000" />
+      <workItem from="1550258322924" duration="8433000" />
+      <workItem from="1577294395415" duration="52000" />
+      <workItem from="1577294480323" duration="4841000" />
+      <workItem from="1577299355005" duration="6769000" />
+      <workItem from="1577309108282" duration="9420000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="C:" />
+      <path value="C:/.." />
+      <path value="$PROJECT_DIR$/../.." />
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+  </component>
+</project>

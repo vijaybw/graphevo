@@ -1,0 +1,10 @@
+//nodesep = width
+//ranksep = height
+digraph { 
+node [shape=circle, width=0.1];
+nodesep=1;ranksep = 1;
+A->B
+A->D
+B->C
+D->E 
+}
