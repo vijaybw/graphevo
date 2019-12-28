@@ -12,6 +12,7 @@ First setup nodejs appropriately on your computer.
 Second install the four packages express request formidable body-parser.
 
 Do not delete the file JavaCallGraphVJ2.jar, JavaCallGraphVJ.jar
+We are working towards adding JavaCallGraphVJ2.jar file's source code.
 ## Usage
 
 You can just run expressServer.js and you should be able to use tab "Software Evolution" to analyze your jar files.
