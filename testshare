@@ -1,0 +1,135 @@
+{
+ "user_credentials": {
+ "access_token": ""
+ },
+ "repos": [
+ {"name": "apache/curator", "masterbranch": "master"}
+ ],
+ "filters": {
+ "repo_filter": "is:pr is:closed is:merged "
+ }
+}
+
+'''
+Developed by ldconejo
+'''
+import json
+import time
+import webbrowser
+import os
+from github import Github
+
+def read_config_file(filename):
+ '''
+ Loads configuration parameters, including passwords
+ '''
+ with open(filename) as config_file:
+ config_data = json.load(config_file)
+ return config_data
+
+def process_config_data(config_data):
+ '''
+ Returns username, password and organization
+ '''
+ access_token = config_data['user_credentials']['access_token']
+ repos = config_data['repos']
+
+ return access_token, repos
+
+def log_into_github(access_token):
+ '''
+ Uses access token to log into Github
+ '''
+ logged_user = Github(access_token)
+ return logged_user
+
+def get_all_repos(logged_user, reponame):
+ '''
+ Gets a list of all repositories under an organization
+ '''
+ return logged_user.get_repo(reponame)
+
+def get_merged_pull_requests(repo, limit):
+ '''
+ Returns a list of links to open pull requests for a given repository
+ '''
+
+ merged_pull_requests = []
+ limit = checklimits("", limit)
+ branchname = "master"
+ if repo.name.__contains__("flume"): branchname = "trunk"
+ open_pulls = repo.get_pulls(state='closed', sort='created', base=branchname)
+
+ repo_pr_counter = 0
+ for pull in open_pulls:
+ if pull.is_merged():
+ limit = checklimits(repo.name,limit)
+ list_of_files = pull.get_files()
+ for file in list_of_files:
+ if file.filename.endswith(".java"):
+ merged_pull_requests.append(PullRequest(pull.html_url, pull.merged_at))
+ repo_pr_counter += 1
+ break
+ print(f"Repo :{repo.name} PRs: #{repo_pr_counter}")
+
+ return merged_pull_requests, limit
+
+def checklimits(reponame, limit):
+ if limit > 1800:
+ print(f"Limit reset to 0 :")
+ limit = 0
+ time.sleep(3)
+ limit+=1
+ print(f"Count: {limit} Repo: {reponame}")
+ return limit
+
+def create_html(list_of_links, filename):
+ '''
+ creates and opens a webpage with a list of links
+ '''
+ filename = str(filename) + ".html"
+ with open(filename, 'w') as output_file:
+ header = """<html>
+ <head>Pull requests</head>
+ <body>"""
+ footer = """</body>
+ </html>"""
+ output_file.write(header)
+
+ list_of_links.sort(key=lambda x: x.mergedat)
+
+ for link in list_of_links:
+ new_link = f"<p><a href=\"{link.url}\">{link.url}</a></p>"
+ output_file.write(new_link)
+
+ output_file.write(footer)
+ # webbrowser.open('file://' + os.path.realpath(filename))
+
+def main():
+ '''
+ Main execution code
+ '''
+ configuration_data = read_config_file('config.json')
+ access_token, repos = process_config_data(configuration_data)
+ logged_user = log_into_github(access_token)
+
+ full_list = []
+ repo_counter = 1
+ limit = 1
+ for prepo in repos:
+ repo = get_all_repos(logged_user, prepo["name"])
+ print(f"Working on repository #{repo_counter}")
+ listf , limit = get_merged_pull_requests(repo, limit)
+ # full_list.extend(listf)
+ repo_counter += 1
+
+ create_html(listf, repo.name)
+ # full_list = []
+
+class PullRequest:
+ def __init__(self, url, mergedat):
+ self.url = url
+ self.mergedat = mergedat
+
+if __name__ == '__main__':
+ main()
