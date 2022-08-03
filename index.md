@@ -1,37 +1,27 @@
-## Welcome to GitHub Pages
+# GraphEvo
 
-You can use the [editor on GitHub](https://github.com/vijaybw/graphevo/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+CHARACTERIZING AND UNDERSTANDING SOFTWARE EVOLUTION USING CALL GRAPHS
+Understanding software evolution is an imperative prerequisite for software related activities such as testing,debugging, and maintenance. As a software system evolves, itincreases in size and complexity, introducing new challengesof understating the inner system interactions and subsequently hinders the overall system comprehension. While tools that construct and visualize call graphs have been used to facilitatesoftware comprehension, they are still limited to capturing the functionality of a single software system at a time. However, understanding the similarities and differences across multiple releases becomes an imperative and challenging task duringsoftware evolution. To this end, we present a tool, namedGraphEvo, that focuses onautomating the process of quantifying and visualizing the changes across multiple releases of a software system based on an information-theoretic approach to comparethe call graphs. Specifically, GraphEvo can automatically construct and visualize the call graph for one or more software releases, calculate and display a set of graph-based metrics, and construct color-coded call graphs to visualize system evolution. The main goal of GraphEvo is to assistsoftware developers and testers in exploring and trackingsoftware changes over time. We demonstrate the functionality ofGraphEvo by analyzing and studying five real software systemsthroughout their entire lifespan.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-### Markdown
+If you use the application in any publications or reports, please cite the following papers: 
+GraphEvo: Characterizing and Understanding Software Evolution using Call Graphs November 2019 Conference: IEEE International Conference on Big Data (IEEE BigData 2019)At: Los Angeles, CA, USA https://www.researchgate.net/publication/337402685_GraphEvo_Characterizing_and_Understanding_Software_Evolution_using_Call_Graphs
+## Installation
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+First setup nodejs appropriately on your computer.
+Second install the four packages express request formidable body-parser.
 
-```markdown
-Syntax highlighted code block
+Do not delete the file JavaCallGraphVJ2.jar, JavaCallGraphVJ.jar
+We are working towards adding JavaCallGraphVJ2.jar file's source code.
+## Usage
 
-# Header 1
-## Header 2
-### Header 3
+You can just run expressServer.js and you should be able to use tab "Software Evolution" to analyze your jar files.
+<div align="center">
+  <a href="https://www.youtube.com/watch?v=Kjwh21PDDf0"><img src="https://img.youtube.com/vi/Kjwh21PDDf0/0.jpg" alt="IMAGE ALT TEXT"></a>
+</div>
 
-- Bulleted
-- List
+## Contributing
+None
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/vijaybw/graphevo/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
